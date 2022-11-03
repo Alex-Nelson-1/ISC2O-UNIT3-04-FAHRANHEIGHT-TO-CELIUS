@@ -1,4 +1,4 @@
-var GHPATH = "/ICS2O-PWA-Test"
+var GHPATH = "/ISC2O-UNIT3-04-FAHRENHEIGHT-TO-CELIUS"
 var APP_PREFIX = "gppwa_"
 var VERSION = "version_001"
 var URLS = [
