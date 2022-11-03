@@ -8,9 +8,12 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ISC2O-UNIT3-04-FAHRENHEIT-TO-CELCIUS/sw.js", {
-    scope: "/ISC2O-UNIT3-04-FAHRENHEIT-TO-CELCIUS/",
-  })
+  navigator.serviceWorker.register(
+    "/ISC2O-UNIT3-04-FAHRENHEIT-TO-CELCIUS/sw.js",
+    {
+      scope: "/ISC2O-UNIT3-04-FAHRENHEIT-TO-CELCIUS/",
+    }
+  )
 }
 
 /**
