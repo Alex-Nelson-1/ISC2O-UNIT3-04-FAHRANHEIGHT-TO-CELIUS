@@ -25,5 +25,5 @@ function convertCelcius() {
   const celcius = (fahrenheit - 32) * (5 / 9)
 
   /* Output */
-document.getElementsByName('celcius')[0].value= celcius
+  document.getElementsByName("celcius")[0].value = celcius
 }
