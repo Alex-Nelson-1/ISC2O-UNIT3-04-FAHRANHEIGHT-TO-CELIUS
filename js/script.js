@@ -1,5 +1,5 @@
 // Created by: Alex Nelson
-// Created on: Oct 2022
+// Created on: Nov 2022
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -16,9 +16,14 @@ if (navigator.serviceWorker) {
   )
 }
 
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+/* This function calculates a users earnings and displays it */
+function convertCelcius() {
+  /* Input */
+  const fahrenheit = parseFloat(document.getElementById("Fahrenheit").value)
+
+  /* Proccess */
+  const celcius = (fahrenheit - 32) * (5 / 9)
+
+  /* Output */
+document.getElementsByName('celcius')[0].value= celcius
 }

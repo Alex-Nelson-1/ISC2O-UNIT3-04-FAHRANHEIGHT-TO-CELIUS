@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<!--- ICS2O-My first PWA --->
+<!--- ICS2O-Fahrenheit-To-Celcius-Convertor--->
 <html lang="en">
+<!--Website information in head-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="My first PWA" />
+    <meta name="description" content="Fahrenheit to Celcius converter" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Alex Nelson" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>GitHub page as PWA template</title>
+    <title>Fahrenheit to Celcius converter</title>
+    <!-- Html that is essential for making the webpage a PWA -->
     <link
       rel="canonical"
       href="https://Alex-Nelson-1.github.io/ISC2O-UNIT3-04-FAHRENHEIT-TO-CELCIUS/"
@@ -20,6 +22,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <!--- None blocking for Lighthouse report --->
     <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
+    <!--- Links to reference the website to Material Design Lite --->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -44,39 +47,52 @@
         href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
       />
     </noscript>
+  <!-- Favicon Code -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
-  <title>My first PWA</title>
   <body>
+    <!-- Script that makes sure the html is poperly connected to MDL and JS -->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
+    <!-- Header -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">My first PWA</span>
+      <header class="mdl-layout__header" style="text-align: center">
+        <div class="mdl-layout-header-row">
+          <span class="mdl-layout__title">Fahrenheit to Celcius Convertor</span>
         </div>
       </header>
+      <!-- Main webpage html -->
       <main class="mdl-layout__content">
-        <p></p>
-        <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
-        />
-        <p></p>
-        <!-- Raised button with ripple -->
+        <div>Please enter the correct temperature</div>
+        <!--Text field accepts input for radius-->
+        <form action="#">
+          Fahrenheit:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="Fahrenheit"
+            />
+            <!--This will control the textfields error message and label-->
+            <label class="mdl-textfield__label" for="Fahrenheit">Fahrenheit</label>
+            <span class="mdl-textfield__error">Numbers Only!</span>
+          </div>
+        </form>
+        <!-- Accent-colored raised button that controls JS function to convert to fahrenheit-->
         <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
+          onclick="convertCelcius()"
         >
-          Say "Hello, World!"
+          Convert to Celcius
         </button>
-        <!-- basic text -->
-        <p></p>
-        <div id="hello-world"></div>
+        <br>
+        <br>
+        <!-- Code for the output textbox below the button -->
+        <label for="celcius">Celcius</label>
+        <input type="textbox" name="celcius"> 
       </main>
     </div>
   </body>
